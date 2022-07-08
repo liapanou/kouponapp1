@@ -1,9 +1,11 @@
+import { Header } from "../components/header/index";
+import { List } from "../components/list/index";
+
 function Home() {
   return (
-    <div>
-      <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-        Responsive
-      </button>
+    <div className="bg-base-100">
+      <Header />
+      <List />
     </div>
   );
 }

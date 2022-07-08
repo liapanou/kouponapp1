@@ -26,7 +26,7 @@ export function List() {
         <tbody>
           {/* epistrefei mia lista me ta katastimata kai tous pontous kai episis kanei link me mia allh selida me ta proionda */}
           {stores.map((y, idx) => (
-            <Link href={`/store/${y.name}`}>
+            <Link href={`/store/${y.name}`} key={y.name}>
               <tr>
                 <td>{idx}</td>
                 <td>{y.name}</td>

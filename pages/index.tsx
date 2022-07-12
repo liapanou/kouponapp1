@@ -3,7 +3,7 @@ import { List } from "../components/list/index";
 
 function Home() {
   return (
-    <div className="bg-base-100">
+    <div>
       <Header />
       <List />
     </div>

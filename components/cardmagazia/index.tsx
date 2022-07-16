@@ -18,7 +18,7 @@ export function CardMagazia(props) {
             <div className=" text-xs font-medium">Coffees</div>
             <br />
             <div className="text-xs text-gray-600 font-medium ">
-              &middot; 30' &middot; min 0,00€
+              • 30 • min 0,00€
             </div>
           </div>
         </div>

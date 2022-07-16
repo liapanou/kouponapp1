@@ -3,14 +3,14 @@ import { Input } from "../input";
 
 export function Header() {
   return (
-    <div className="navbar sticky top-0 shadow z-50 bg-base-100">
+    <div className="navbar sticky top-0 shadow z-50 bg-base-100 ">
       <div className="flex-1">
         <Link href={"/"}>
           <a className="btn btn-ghost normal-case text-xl">KouponApp</a>
         </Link>
       </div>
-      <div className=" flex flex-col items-center justify-center">
-        <div className="input-group">
+      <div className="flex flex-1  items-center justify-center">
+        <div className="input-group ">
           <input
             type="text"
             placeholder="Search…"

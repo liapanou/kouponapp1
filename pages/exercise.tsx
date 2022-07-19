@@ -1,6 +1,6 @@
-export default function Exercise() {
+function Header() {
   return (
-    <div id="app" className="bg-gray-200 antialiased">
+    <div>
       <header className="bg-gray-900">
         <div className=" px-4 py-3 flex justify-between ">
           <div>
@@ -88,205 +88,181 @@ export default function Exercise() {
           </div>
         </nav>
       </header>
+    </div>
+  );
+}
 
-      <section className="bg-gray-800">
-        <div className="flex justify-between  px-4 py-3">
-          <div className="relative">
-            <div className="absolute inset-y-0 left-0 flex items-center pl-3">
-              <img
-                className="w-6 h-6"
-                src="https://s2.svgbox.net/hero-outline.svg?ic=search&color=aaa"
-              ></img>
-            </div>
-            <input
-              className="bg-gray-900 focus:bg-white focus:text-gray-900 pl-10 pr-2 text-white rounded-lg px-10 py-2"
-              placeholder="Search by keywords"
-            ></input>
-          </div>
-          <button className="inline-flex bg-gray-700 rounded-lg shadow pl-3 pr-4 pt-2 hover:bg-gray-600 focus:outline-none focus:shadow-outline">
-            <img
-              className="h-6 w-6"
-              src="https://s2.svgbox.net/octicons.svg?ic=filter&color=aaa"
-              alt=""
-            ></img>
-            <span className="text-white font-medium ml-1">Filters</span>
-          </button>
-        </div>
-        <form className="">
-          <fieldset className="px-4 py-4 border-t border-gray-900">
-            <div className=" grid grid-cols-2 gap-4  ">
-              {/* 1 */}
-              <div className="w-full">
-                <span className="text-sm font-semibold text-gray-500">
-                  Bedrooms
-                </span>
-                <select className=" mt-1 select select-bordered bg-gray-600 focus:bg-gray-700 rounded-lg text-white  shadow  block w-full">
-                  <option> </option>
-                </select>
-              </div>
-              {/* 2 */}
-              <div className="w-full">
-                <span className="text-sm font-semibold text-gray-500">
-                  Bathrooms
-                </span>
-                <select className=" mt-1 select select-bordered bg-gray-600  focus:bg-gray-700 rounded-lg text-white shadow  block w-full">
-                  <option>2</option>
-                </select>
-              </div>
-              {/* 3*/}
-              <div className="w-full">
-                <span className="text-sm font-semibold text-gray-500">
-                  Price Range
-                </span>
-                <select className=" mt-1 select select-bordered bg-gray-600 focus:bg-gray-700  rounded-lg text-white shadow block w-full">
-                  <option>Up to 2,000$/wk</option>
-                </select>
-              </div>
-            </div>
-          </fieldset>
-          <fieldset className="px-4 py-4 border-t border-gray-900">
-            {/* 1 */}
-            <span className=" block text-sm font-semibold text-gray-500">
-              Property Type
-            </span>
-            <div className="flex items-center">
-              <input
-                className="bg-gray-900"
-                type="radio"
-                name="propertyType"
-                value="house"
-              ></input>
-              <span className="ml-2 text-white">House</span>
-            </div>
-            <div className="flex items-center">
-              <input
-                className="bg-gray-900"
-                type="radio"
-                name="propertyType"
-                value="apartment"
-              ></input>
-              <span className="ml-2 text-white">Apartment</span>
-            </div>
-            <div className="flex items-center">
-              <input
-                className="accent-gray-900"
-                type="radio"
-                name="propertyType"
-                value="loft"
-              ></input>
-              <span className="ml-2 text-white">Loft</span>
-            </div>
-            <div className="flex items-center">
-              <input
-                className="accent-gray-900"
-                type="radio"
-                name="propertyType"
-                value="townhouse"
-              ></input>
-              <span className="ml-2 text-white">Townhouse</span>
-            </div>
-
-            {/* 2 */}
-            <span className="block text-sm font-semibold text-gray-500">
-              Amenities
-            </span>
-            <div>
-              <input
-                className=" accent-gray-900"
-                type="checkbox"
-                name="balcony"
-              ></input>
-              <span className=" ml-2 text-white">Balcony</span>
-            </div>
-            <div>
-              <input
-                className=" accent-gray-900"
-                type="checkbox"
-                name="airConditioning"
-              ></input>
-              <span className=" ml-2 text-white">Air conditioning</span>
-            </div>
-            <div>
-              <input
-                className=" accent-gray-900"
-                type="checkbox"
-                name="pool"
-              ></input>
-              <span className=" ml-2 text-white">Pool</span>
-            </div>
-            <div>
-              <input
-                className=" accent-gray-900"
-                type="checkbox"
-                name="beach"
-              ></input>
-              <span className=" ml-2 text-white">Beach</span>
-            </div>
-            <div>
-              <input
-                className=" accent-gray-900 "
-                type="checkbox"
-                name="petFriendly"
-              ></input>
-              <span className=" ml-2 text-white">Pet friendly</span>
-            </div>
-            <div>
-              <input
-                className=" accent-gray-900 "
-                type="checkbox"
-                name="kidFriendly"
-              ></input>
-              <span className=" ml-2 text-white">Kid friendly</span>
-            </div>
-            <div>
-              <input
-                className=" accent-gray-900 "
-                type="checkbox"
-                name="parking"
-              ></input>
-              <span className=" ml-2 text-white">Parking</span>
-            </div>
-          </fieldset>
-          <div className=" bg-gray-900 px-4 py-4">
-            <button className="block w-full h-11 bg-indigo-500  hover:bg-indigo-400  rounded-lg font-semibold text-white">
-              Update results
-            </button>
-          </div>
-        </form>
-      </section>
-      <main className="px-4 py-6">
-        <h3 className="text-gray-900 text-xl font-semibold ">Los Angeles</h3>
-        <p className="text-gray-600 mb-4 mt-2">
-          Live like the stars in these luxurius Southern California estates.
-        </p>
+function Card() {
+  return (
+    <div className="border w-full">
+      <div>
         <div>
-          <div>
-            <div>
-              <img
-                className="rounded-lg shadow-md h-64"
-                src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bW9kZXJuJTIwaG91c2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-              ></img>
-            </div>
-            <div className="relative px-4 -mt-16">
-              <div className="bg-white rounded-lg px-4 py-3 shadow-lg ">
-                <div className="flex">
-                  <span className="px-2 py-2 leading-none inline-block  bg-teal-200 text-teal-800 font-semibold rounded-full uppercase tracking-wide text-xs">
-                    Plus
-                  </span>
-                  <div className="text-xs ml-2 text-gray-600 font-semibold uppercase tracking-wide">
-                    3 beds &bull; 2 baths
-                  </div>
-                </div>
-
-                <h4 className="text-gray-900 font-semibold text-lg mt-1">
-                  Modern home in city center
-                </h4>
-                <div className="mt-1">
-                  <span className="text-gray-900">1,400$ </span>
-                  <span className=" ml-1  text-sm text-gray-600">/wk</span>
-                  <div className="text-sm text-gray-600">34 reviews</div>
-                </div>
+          <img
+            className="rounded-lg shadow-md h-fit w-full"
+            src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bW9kZXJuJTIwaG91c2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+          ></img>
+        </div>
+        <div className="relative px-4 -mt-16">
+          <div className="bg-white rounded-lg px-4 py-3 shadow-lg ">
+            <div className="flex">
+              <span className="px-2 py-2 leading-none inline-block  bg-teal-200 text-teal-800 font-semibold rounded-full uppercase tracking-wide text-xs">
+                Plus
+              </span>
+              <div className="text-xs ml-2 text-gray-600 font-semibold uppercase tracking-wide">
+                3 beds &bull; 2 baths
               </div>
+            </div>
+
+            <h4 className="text-gray-900 font-semibold text-lg mt-1">
+              Modern home in city center
+            </h4>
+            <div className="mt-1">
+              <span className="text-gray-900">1,400$ </span>
+              <span className=" ml-1  text-sm text-gray-600">/wk</span>
+              <div className="text-sm text-gray-600">34 reviews</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Filtra() {
+  return (
+    <div className="px-4 py-4">
+      <form className="">
+        <div className=" grid gap-4">
+          {/* 1 */}
+          <div className="form-control w-full max-w-xs">
+            <label className="label">
+              <span className="label-text">
+                Pick the best fantasy franchise
+              </span>
+            </label>
+            <select className="select select-bordered">
+              <option disabled selected>
+                Pick one
+              </option>
+              <option>Star Wars</option>
+              <option>Harry Potter</option>
+              <option>Lord of the Rings</option>
+              <option>Planet of the Apes</option>
+              <option>Star Trek</option>
+            </select>
+          </div>
+          {/* 2 */}
+          <div className="form-control w-full max-w-xs">
+            <label className="label">
+              <span className="label-text">
+                Pick the best fantasy franchise
+              </span>
+            </label>
+            <select className="select select-bordered">
+              <option disabled selected>
+                Pick one
+              </option>
+              <option>Star Wars</option>
+              <option>Harry Potter</option>
+              <option>Lord of the Rings</option>
+              <option>Planet of the Apes</option>
+              <option>Star Trek</option>
+            </select>
+          </div>
+        </div>
+
+        <div className="divider" />
+        {/* 2 */}
+        <div>
+          <span className="block text-sm font-semibold text-gray-500 mb-2">
+            Amenities
+          </span>
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-1">
+            <div className="form-control border w-fit">
+              <label className="label cursor-pointer">
+                <input type="checkbox" className="checkbox checkbox-sm" />
+                <span className="text-sm ml-2">Remember me</span>
+              </label>
+            </div>
+            <div className="form-control border w-fit">
+              <label className="label cursor-pointer">
+                <input type="checkbox" className="checkbox checkbox-sm" />
+                <span className="text-sm ml-2">Remember me</span>
+              </label>
+            </div>
+            <div className="form-control border w-fit">
+              <label className="label cursor-pointer">
+                <input type="checkbox" className="checkbox checkbox-sm" />
+                <span className="text-sm ml-2">Remember me</span>
+              </label>
+            </div>
+            <div className="form-control border w-fit">
+              <label className="label cursor-pointer">
+                <input type="checkbox" className="checkbox checkbox-sm" />
+                <span className="text-sm ml-2">Remember me</span>
+              </label>
+            </div>
+            <div className="form-control border w-fit">
+              <label className="label cursor-pointer">
+                <input type="checkbox" className="checkbox checkbox-sm" />
+                <span className="text-sm ml-2">Remember me</span>
+              </label>
+            </div>
+            <div className="form-control border w-fit">
+              <label className="label cursor-pointer">
+                <input type="checkbox" className="checkbox checkbox-sm" />
+                <span className="text-sm ml-2">Remember me</span>
+              </label>
+            </div>
+            <div className="form-control border w-fit">
+              <label className="label cursor-pointer">
+                <input type="checkbox" className="checkbox checkbox-sm" />
+                <span className="text-sm ml-2">Remember me</span>
+              </label>
+            </div>
+            <div className="form-control border w-fit">
+              <label className="label cursor-pointer">
+                <input type="checkbox" className="checkbox checkbox-sm" />
+                <span className="text-sm ml-2">Remember me</span>
+              </label>
+            </div>
+            <div className="form-control border w-fit">
+              <label className="label cursor-pointer">
+                <input type="checkbox" className="checkbox checkbox-sm" />
+                <span className="text-sm ml-2">Remember me</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div className="divider" />
+        <button className="btn w-full">Update results</button>
+      </form>
+    </div>
+  );
+}
+export default function Exercise() {
+  return (
+    <div id="app" className="">
+      <main>
+        <div className="grid grid-cols-1 md:grid-cols-[300px_1fr]">
+          <div className="bg-base-300 sticky md:top-0 md:h-screen h-fit border">
+            <Filtra />
+          </div>
+
+          <div className="border">
+            <header className="h-20 border w-full shadow sticky top-0 bg-white z-50"></header>
+            <div className="grid  md:grid-cols-2 lg:grid-cols-3 p-8 gap-4">
+              <Card />
+              <Card />
+              <Card />
+              <Card />
+              <Card />
+              <Card />
+              <Card />
+              <Card />
+              <Card />
+              <Card />
             </div>
           </div>
         </div>

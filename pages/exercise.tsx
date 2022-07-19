@@ -246,12 +246,34 @@ export default function Exercise() {
     <div id="app" className="">
       <main>
         <div className="grid grid-cols-1 md:grid-cols-[300px_1fr]">
-          <div className="bg-base-300 sticky md:top-0 md:h-screen h-fit border">
+          <div className="bg-base-300 md:sticky md:top-0 md:h-screen h-fit border">
+            <div className="md:hidden  shadow border navbar bg-base-100">
+              <div className="flex-1">
+                <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+              </div>
+              <div className="flex-none">
+                <button className="btn btn-square btn-ghost">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    className="inline-block w-5 h-5 stroke-current"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
             <Filtra />
           </div>
 
           <div className="border">
-            <header className="h-20 border w-full shadow sticky top-0 bg-white z-50"></header>
+            <header className="h-20 border w-full shadow sticky top-0 bg-white hidden md:block z-50"></header>
             <div className="grid  md:grid-cols-2 lg:grid-cols-3 p-8 gap-4">
               <Card />
               <Card />

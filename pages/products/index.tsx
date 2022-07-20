@@ -6,6 +6,8 @@ import { CardProionda } from "../../components/cardproionda/index";
 import { Form } from "../../components/form";
 import { Header } from "../../components/header/index";
 
+import { PriceFilter } from "../../components/pricefilter";
+
 export default function Page() {
   // fernei kai apothikevei ti lista me ta data tou server
   // to useEffect to xrisimopoioume gia na ginei mia fora render
@@ -16,18 +18,28 @@ export default function Page() {
 
   return (
     <div>
-      <Header />
-      <div className="mt-auto flex w-full">
-        <div className="grid grid-cols-6 gap-4 p-4 mt-20 container mx-auto ">
-          {products.map((obj, idx) => (
-            <CardProionda
-              name={obj.name}
-              price={obj.price}
-              src={obj.src}
-              key={idx}
-            />
-          ))}
-        </div>
+      <div id="app" className="">
+        <main>
+          <Header />
+          <div className="grid grid-cols-1 md:grid-cols-[300px_1fr]">
+            <div className="bg-base-300 md:sticky md:top-16 md:h-screen h-fit border">
+              <PriceFilter />
+            </div>
+
+            <div className="border">
+              <div className="grid  md:grid-cols-2 lg:grid-cols-3 p-8 gap-4">
+                {products.map((obj, idx) => (
+                  <CardProionda
+                    name={obj.name}
+                    price={obj.price}
+                    src={obj.src}
+                    key={idx}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        </main>
       </div>
     </div>
   );

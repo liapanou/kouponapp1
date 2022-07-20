@@ -1,25 +1,39 @@
 import { CardMagazia } from "../components/cardmagazia";
-import { CousineFilter } from "../components/cousinefilter";
+import { PriceFilter } from "../components/pricefilter";
 import { Header } from "../components/header/index";
 
 function Home() {
   return (
     <div>
-      <Header />
-      <div className="w-screen h-screen border">
-        <div className="bg-base-300 container mx-auto h-screen">
-          <div className="grid h-full grid-cols-[350px_1fr]">
-            <div className="border w-full h-full ">
-              <CousineFilter />
+      <div id="app" className="">
+        <main>
+          <div className="grid grid-cols-1 md:grid-cols-[300px_1fr]">
+            <div className="bg-base-300 md:sticky md:top-0 md:h-screen h-fit border">
+              <div className="md:hidden">
+                <Header />
+              </div>
+              <PriceFilter />
             </div>
+
             <div className="border">
-              <div className="h-20 border">asdasd</div>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="sticky top-0 z-50 hidden md:block">
+                <Header />
+              </div>
+              <div className="grid  md:grid-cols-2 lg:grid-cols-3 p-8 gap-4">
+                <CardMagazia />
+                <CardMagazia />
+                <CardMagazia />
+                <CardMagazia />
+                <CardMagazia />
+                <CardMagazia />
+                <CardMagazia />
+                <CardMagazia />
+                <CardMagazia />
                 <CardMagazia />
               </div>
             </div>
           </div>
-        </div>
+        </main>
       </div>
     </div>
   );

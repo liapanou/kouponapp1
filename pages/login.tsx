@@ -117,9 +117,11 @@ export default function Login() {
 
               <div className="divider"></div>
               <div className="pb-2 pt-4">
-                <Button loading={load} className="btn  w-full btn-xl">
-                  {type === "register" ? "Register" : "Login"}
-                </Button>
+                <Link href="/">
+                  <Button loading={load} className="btn  w-full btn-xl">
+                    {type === "register" ? "Register" : "Login"}
+                  </Button>
+                </Link>
               </div>
               <div className="p-4 text-center right-0 left-0 flex justify-center space-x-4 mt-16 lg:hidden ">
                 <a href="#">

@@ -5,8 +5,9 @@ import axios, { AxiosError } from "axios";
 import clsx from "clsx";
 import { Input } from "../components/input";
 import { Button } from "../components/button";
+import { withSessionSsr } from "../lib/withSession";
 
-export default function Login() {
+function Login() {
   const [firstname, setFirstName] = useState<string>("");
   const [lastname, setLastName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
@@ -37,14 +38,18 @@ export default function Login() {
               onSubmit={(evt) => {
                 evt.preventDefault();
                 setErr({});
+                console.log(userName, password);
                 if (!userName || !password) return;
                 setLoad(true);
                 axios
-                  .post("/api/login", {
+                  .post("/api/auth", {
                     userName,
                     password,
+                    type: "login",
                   })
-                  .then((d) => {})
+                  .then((d) => {
+                    router.push("/");
+                  })
                   .catch((reason: AxiosError) => {
                     // const { key, msg } = reason.response?.data;
                     // if (key === "userName") setUsername("");
@@ -78,10 +83,10 @@ export default function Login() {
               <Input
                 label=""
                 onChange={(evt) => {
-                  setEmail(evt.currentTarget.value);
+                  setUsername(evt.currentTarget.value);
                 }}
-                placeholder={`Email ${type === "register" ? "*" : ""}`}
-                type="email"
+                placeholder={`Username ${type === "register" ? "*" : ""}`}
+                type="text"
               ></Input>
 
               <Input
@@ -117,11 +122,13 @@ export default function Login() {
 
               <div className="divider"></div>
               <div className="pb-2 pt-4">
-                <Link href="/">
-                  <Button loading={load} className="btn  w-full btn-xl">
-                    {type === "register" ? "Register" : "Login"}
-                  </Button>
-                </Link>
+                <Button
+                  type="submit"
+                  loading={load}
+                  className="btn  w-full btn-xl"
+                >
+                  {type === "register" ? "Register" : "Login"}
+                </Button>
               </div>
               <div className="p-4 text-center right-0 left-0 flex justify-center space-x-4 mt-16 lg:hidden ">
                 <a href="#">
@@ -174,3 +181,23 @@ export default function Login() {
     </>
   );
 }
+
+export const getServerSideProps = withSessionSsr(
+  async function getServerSideProps({ req }) {
+    const { user } = req?.session;
+    if (user) {
+      return {
+        redirect: {
+          destination: "/",
+          permanent: false,
+        },
+      };
+    }
+
+    return {
+      props: {},
+    };
+  }
+);
+
+export default Login;

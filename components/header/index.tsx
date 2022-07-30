@@ -1,9 +1,11 @@
+import axios from "axios";
 import Link from "next/link";
-import { useState } from "react";
-
-import { Input } from "../input";
 
 export function Header() {
+  const logout = () =>
+    axios.post("/api/auth", {
+      type: "logout",
+    });
   return (
     <div className="navbar sticky top-0 shadow z-50 bg-base-100 ">
       <div className="flex-1">
@@ -34,7 +36,7 @@ export function Header() {
                 <a className="justify-between">Add product</a>
               </Link>
             </li>
-            <li>
+            <li onClick={logout}>
               <Link href="/login">
                 <a className="justify-between">Logout</a>
               </Link>

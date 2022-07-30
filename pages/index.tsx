@@ -1,10 +1,10 @@
 import { CardMagazia } from "../components/cardmagazia";
 import { ShopFilter } from "../components/shopfilter";
 import { Header } from "../components/header/index";
-import Link from "next/link";
 
 function Home() {
   return (
+<<<<<<< HEAD
     <div>
       <div id="app" className="">
         <main>
@@ -85,6 +85,30 @@ function Home() {
             </div>
           </div>
         </main>
+=======
+    <div className="h-screen overflow-hidden">
+      <Header />
+
+      <div className="grid grid-cols-1 md:grid-cols-[300px_1fr]">
+        <PriceFilter />
+
+        <div className="grid overflow-auto pb-20 max-h-screen h-fit  md:grid-cols-2 lg:grid-cols-4 p-8 gap-4">
+          <CardMagazia />
+          <CardMagazia />
+          <CardMagazia />
+          <CardMagazia />
+          <CardMagazia />
+          <CardMagazia />
+          <CardMagazia />
+          <CardMagazia />
+          <CardMagazia />
+          <CardMagazia />
+          <CardMagazia />
+          <CardMagazia />
+          <CardMagazia />
+          <CardMagazia />
+        </div>
+>>>>>>> a052574 (test)
       </div>
     </div>
   );

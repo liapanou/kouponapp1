@@ -11,6 +11,7 @@ export default function Newproduct() {
   return (
     <div>
       <Header />
+
       <form className="grid container mx-auto mt-20 gap-4 px-4 py-4">
         <ul>
           <li>

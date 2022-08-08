@@ -3,52 +3,28 @@ export function PriceFilter() {
     <div>
       <div className="px-4 py-4">
         <form className="">
-          <div className=" grid gap-4">
-            {/* 1 */}
-            <div className="form-control w-full max-w-xs">
+          <div className=" ">
+            <div className="form-control w-full max-w-xs ">
               <label className="label">
-                <span className="label-text">
-                  Price €
-                </span>
+                <span className="label-text ">Short by</span>
               </label>
               <select className="select select-bordered">
                 <option disabled selected>
                   Pick one
                 </option>
-                <option>Star Wars</option>
-                <option>Harry Potter</option>
-                <option>Lord of the Rings</option>
-                <option>Planet of the Apes</option>
-                <option>Star Trek</option>
-              </select>
-            </div>
-            {/* 2 */}
-            <div className="form-control w-full max-w-xs">
-              <label className="label">
-                <span className="label-text">
-                  Price(points)
-                </span>
-              </label>
-              <select className="select select-bordered">
-                <option disabled selected>
-                  Pick one
-                </option>
-                <option>Star Wars</option>
-                <option>Harry Potter</option>
-                <option>Lord of the Rings</option>
-                <option>Planet of the Apes</option>
-                <option>Star Trek</option>
+                <option>Points</option>
+                <option>Reviews</option>
+                <option>Price</option>
               </select>
             </div>
           </div>
-
           <div className="divider" />
           {/* 2 */}
           <div>
             <span className="block text-sm font-semibold text-gray-500 mb-2">
               Food & Drinks
             </span>
-            <div className="grid grid-cols-2 gap-4 md:grid-cols-1">
+            <div className="grid grid-cols-2 gap-4 ">
               <div className="form-control border w-fit">
                 <label className="label cursor-pointer">
                   <input type="checkbox" className="checkbox checkbox-sm" />

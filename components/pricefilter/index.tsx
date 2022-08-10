@@ -1,4 +1,8 @@
+import { useRouter } from "next/router";
+
 export function PriceFilter() {
+  const router = useRouter();
+
   return (
     <div>
       <div className="px-4 py-4">
@@ -8,13 +12,20 @@ export function PriceFilter() {
               <label className="label">
                 <span className="label-text ">Short by</span>
               </label>
-              <select className="select select-bordered">
+              <select
+                onChange={(evt) => {
+                  router.push(
+                    `/?sortBy=${evt.currentTarget.value.toLowerCase()}`
+                  );
+                }}
+                className="select select-bordered"
+              >
                 <option disabled selected>
                   Pick one
                 </option>
-                <option>Points</option>
-                <option>Reviews</option>
-                <option>Price</option>
+                <option>Points </option>
+                <option>Reviews </option>
+                <option>Price </option>
               </select>
             </div>
           </div>

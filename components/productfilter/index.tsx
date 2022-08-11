@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 
-export function PriceFilter() {
+export function ProductFilter() {
   const router = useRouter();
   function push(obj: Record<string, any>) {
     const q = router.query;
@@ -82,55 +82,55 @@ export function PriceFilter() {
               Food & Drinks
             </span>
             <div className="grid grid-cols-2 gap-4 ">
-              <div className="form-control border w-fit">
+              <div className="form-control  w-fit">
                 <label className="label cursor-pointer">
                   <input type="checkbox" className="checkbox checkbox-sm" />
                   <span className="text-sm ml-2">Beverages</span>
                 </label>
               </div>
-              <div className="form-control border w-fit">
+              <div className="form-control  w-fit">
                 <label className="label cursor-pointer">
                   <input type="checkbox" className="checkbox checkbox-sm" />
                   <span className="text-sm ml-2">Coffees</span>
                 </label>
               </div>
-              <div className="form-control border w-fit">
+              <div className="form-control  w-fit">
                 <label className="label cursor-pointer">
                   <input type="checkbox" className="checkbox checkbox-sm" />
                   <span className="text-sm ml-2">Paistres</span>
                 </label>
               </div>
-              <div className="form-control border w-fit">
+              <div className="form-control  w-fit">
                 <label className="label cursor-pointer">
                   <input type="checkbox" className="checkbox checkbox-sm" />
                   <span className="text-sm ml-2">Snacks</span>
                 </label>
               </div>
-              <div className="form-control border w-fit">
+              <div className="form-control  w-fit">
                 <label className="label cursor-pointer">
                   <input type="checkbox" className="checkbox checkbox-sm" />
                   <span className="text-sm ml-2">Remember me</span>
                 </label>
               </div>
-              <div className="form-control border w-fit">
+              <div className="form-control  w-fit">
                 <label className="label cursor-pointer">
                   <input type="checkbox" className="checkbox checkbox-sm" />
                   <span className="text-sm ml-2">Remember me</span>
                 </label>
               </div>
-              <div className="form-control border w-fit">
+              <div className="form-control  w-fit">
                 <label className="label cursor-pointer">
                   <input type="checkbox" className="checkbox checkbox-sm" />
                   <span className="text-sm ml-2">Remember me</span>
                 </label>
               </div>
-              <div className="form-control border w-fit">
+              <div className="form-control  w-fit">
                 <label className="label cursor-pointer">
                   <input type="checkbox" className="checkbox checkbox-sm" />
                   <span className="text-sm ml-2">Remember me</span>
                 </label>
               </div>
-              <div className="form-control border w-fit">
+              <div className="form-control  w-fit">
                 <label className="label cursor-pointer">
                   <input type="checkbox" className="checkbox checkbox-sm" />
                   <span className="text-sm ml-2">Remember me</span>

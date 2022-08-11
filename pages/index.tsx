@@ -1,5 +1,5 @@
 import { CardMagazia } from "../components/cardmagazia";
-import { PriceFilter } from "../components/pricefilter";
+import { ShopFilter } from "../components/shopfilter";
 import { Header } from "../components/header/index";
 import Link from "next/link";
 
@@ -12,7 +12,7 @@ function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-[300px_1fr]">
             <div className="bg-base-300 md:sticky md:top-16 md:h-screen h-fit border">
-              <PriceFilter />
+              <ShopFilter />
             </div>
             <div>
               <div className="grid  md:grid-cols-2 lg:grid-cols-3 p-8 gap-4">

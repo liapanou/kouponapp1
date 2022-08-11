@@ -6,7 +6,7 @@ import { CardProionda } from "../../components/cardproionda/index";
 import { Form } from "../../components/form";
 import { Header } from "../../components/header/index";
 
-import { PriceFilter } from "../../components/pricefilter";
+import { ProductFilter } from "../../components/productfilter";
 
 export default function Page() {
   // fernei kai apothikevei ti lista me ta data tou server
@@ -23,7 +23,7 @@ export default function Page() {
           <Header />
           <div className="grid grid-cols-1 md:grid-cols-[300px_1fr]">
             <div className="bg-base-300 md:sticky md:top-16 md:h-screen h-fit border">
-              <PriceFilter />
+              <ProductFilter />
             </div>
 
             <div className="border">

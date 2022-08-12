@@ -26,7 +26,7 @@ export function ShopFilter() {
                 </label>
                 <select
                   onChange={(evt) => {
-                    push({ sortBy: evt.currentTarget.value });
+                    push({ sortBy: evt.currentTarget.value.toLowerCase() });
                   }}
                   className="select select-bordered"
                 >
@@ -40,38 +40,22 @@ export function ShopFilter() {
               </div>
             </div>
             {/* 2 */}
-            <div className="grid grid-cols-2 gap-2 py-2">
-              <div className="form-control w-full max-w-xs">
-                <label className="label">
-                  <span className="label-text ">min</span>
-                </label>
-                <select
-                  onChange={(evt) => {
-                    push({ min: evt.currentTarget.value });
-                  }}
-                  className="select select-bordered"
-                >
-                  {" "}
-                  <option>20</option>
-                  <option>30</option>
-                  <option>40</option>
-                </select>
-              </div>
-              <div className="form-control w-full max-w-xs">
-                <label className="label">
-                  <span className="label-text ">max</span>
-                </label>
-                <select
-                  onChange={(evt) => {
-                    push({ max: evt.currentTarget.value });
-                  }}
-                  className="select select-bordered"
-                >
-                  <option>80</option>
-                  <option>90</option>
-                  <option>100</option>
-                </select>
-              </div>
+            <div className="form-control w-full max-w-xs">
+              <label className="label">Type</label>
+              <select
+                onChange={(evt) => {
+                  push({ type: evt.currentTarget.value });
+                }}
+                className="select select-bordered"
+              >
+                <option disabled selected>
+                  Pick one
+                </option>
+                <option>Cafe</option>
+                <option>Bakery</option>
+                <option>Tavern</option>
+                <option>Hairdress</option>
+              </select>
             </div>
 
             <div className="divider" />

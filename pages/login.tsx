@@ -5,7 +5,6 @@ import axios, { AxiosError } from "axios";
 import clsx from "clsx";
 import { Input } from "../components/input";
 import { Button } from "../components/button";
-import { withSessionSsr } from "../lib/withSession";
 
 function Login() {
   const [firstname, setFirstName] = useState<string>("");
@@ -181,23 +180,5 @@ function Login() {
     </>
   );
 }
-
-export const getServerSideProps = withSessionSsr(
-  async function getServerSideProps({ req }) {
-    const { user } = req?.session;
-    if (user) {
-      return {
-        redirect: {
-          destination: "/",
-          permanent: false,
-        },
-      };
-    }
-
-    return {
-      props: {},
-    };
-  }
-);
 
 export default Login;

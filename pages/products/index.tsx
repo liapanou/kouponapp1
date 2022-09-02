@@ -16,22 +16,12 @@ export default function Page() {
   }, []);
 
   return (
-<<<<<<< HEAD
     <div>
-      <div id="app" className="">
-        <main>
-          <Header />
-          <div className="grid grid-cols-1 md:grid-cols-[300px_1fr]">
-            <div className="bg-base-300 md:sticky md:top-16 md:h-screen h-fit border">
-              <ProductFilter />
-            </div>
-=======
-    <div className="h-screen overflow-hidden">
       <Header />
->>>>>>> a052574 (test)
-
       <div className="grid grid-cols-1 md:grid-cols-[300px_1fr]">
-        <PriceFilter />
+        <div className="bg-base-300 md:sticky md:top-16 md:h-screen h-fit border">
+          <ProductFilter />
+        </div>
 
         <div className="grid overflow-auto pb-20 max-h-screen h-fit  md:grid-cols-2 lg:grid-cols-4 p-8 gap-4">
           {products.map((obj, idx) => (

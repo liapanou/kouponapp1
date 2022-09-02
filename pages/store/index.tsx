@@ -13,30 +13,35 @@ export default function Orders() {
         <table className="table w-full ">
           <thead>
             <tr>
-              <th>Name</th>
               <th>Order</th>
+              <th>QTY</th>
+              <th>Name of client</th>
               <th>Points</th>
             </tr>
           </thead>
           <tbody>
             <tr>
+              <td>coffee</td>
+              <td>1</td>
               <td>Betty Papa</td>
-              <td>1 coffee</td>
-              <td className="flex">50</td>
-            </tr>
-            <tr>
-              <td>Betty Papa</td>
-              <td>1 coffee</td>
               <td>50</td>
             </tr>
             <tr>
+              <td>coffee</td>
+              <td>1</td>
               <td>Betty Papa</td>
-              <td>1 coffee</td>
               <td>50</td>
             </tr>
             <tr>
+              <td>coffee</td>
+              <td>1</td>
               <td>Betty Papa</td>
-              <td>1 coffee</td>
+              <td>50</td>
+            </tr>
+            <tr>
+              <td>coffee</td>
+              <td>1</td>
+              <td>Betty Papa</td>
               <td>50</td>
             </tr>
           </tbody>

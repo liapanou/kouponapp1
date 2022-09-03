@@ -1,6 +1,8 @@
 import { CardMagazia } from "../components/cardmagazia";
 import { ShopFilter } from "../components/shopfilter";
 import { Header } from "../components/header/index";
+import { GetServerSideProps } from "next";
+import { withSessionSsr } from "../lib/withSession";
 
 function Home() {
   return (
@@ -30,5 +32,22 @@ function Home() {
     </div>
   );
 }
+
+export const getServerSideProps: GetServerSideProps = withSessionSsr(
+  async function getServerSideProps({ req }) {
+    const user = req.session.user;
+    let destination = "/login";
+    if (user) {
+      destination = "/tracking";
+    }
+    if (user?.admin) destination = "/admin";
+    return {
+      redirect: {
+        destination,
+        permanent: false,
+      },
+    };
+  }
+);
 
 export default Home;

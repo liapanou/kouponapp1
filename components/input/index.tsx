@@ -21,7 +21,10 @@ export function Input(
         disabled={disabled}
         type="text"
         {...rest}
-        className={clsx("input input-bordered w-full", props.className)}
+        className={clsx(
+          "input text-base-content input-bordered w-full",
+          props.className
+        )}
       />
     </div>
   );

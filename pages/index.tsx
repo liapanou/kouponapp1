@@ -35,18 +35,25 @@ function Home() {
 
 export const getServerSideProps: GetServerSideProps = withSessionSsr(
   async function getServerSideProps({ req }) {
+    const redirect = !req.session.user || req.session.user.admin;
+
     const user = req.session.user;
-    let destination = "/login";
-    if (user) {
-      destination = "/tracking";
+
+    if (redirect) {
+      let destination = "/login";
+      if (user?.admin) destination = "/admin";
+
+      return {
+        redirect: {
+          destination,
+          permanent: false,
+        },
+      };
+    } else {
+      return {
+        props: {},
+      };
     }
-    if (user?.admin) destination = "/admin";
-    return {
-      redirect: {
-        destination,
-        permanent: false,
-      },
-    };
   }
 );
 

@@ -36,11 +36,13 @@ export function Header() {
                 <a className="justify-between">Add product</a>
               </Link>
             </li>
-            <li onClick={logout}>
-              <Link href="/login">
-                <a className="justify-between">Logout</a>
-              </Link>
-            </li>
+            <form method="POST" action="/api/auth?type=logout">
+              <li>
+                <button type="submit">
+                  <a className="justify-between">Logout</a>
+                </button>
+              </li>
+            </form>
           </ul>
         </div>
       </div>

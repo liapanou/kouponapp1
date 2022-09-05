@@ -6,21 +6,31 @@ export type Product = {
 
 export function CardProionda(props: Product) {
   return (
-    <div className=" container mx-auto relative ">
-      <div>
-        <img
-          className="rounded-lg shadow-md  h-fit w-full "
-          src="https://cdn.e-food.gr/cdn-cgi/image/w=800,h=450,fit=cover,q=100,f=auto/restaurants/5378696/banner_item/000000000007?c=13c2355b236cd161ab41e1b9c65d9fdd"
-        ></img>
+    <div className="relative w-full h-fit rounded-lg">
+      <img
+        className="rounded-lg shadow-md  h-fit w-full "
+        src="https://img.freepik.com/free-photo/mockup-disposable-coffee-cup_53876-63381.jpg?w=2000"
+        alt="product"
+      />
+      <div className="absolute bg-base-200 flex justify-center items-center rounded-lg text-base-content ml-2 top-3 px-2 py-2">
+        20
+        <img className="w-10 h-10" src="/images/icons8-medal-100.png" />
       </div>
-      <div className="relative px-4 -mt-16">
-        <div className="bg-white rounded-lg px-4 py-3 shadow-lg ">
-          <div className="flex"></div>
-
-          <h4 className="text-gray-900 font-semibold text-lg mt-1">Coffee</h4>
-          <div className="mt-1">
-            <span className="text-gray-900">2,5$ </span>
-            <span className="text-gray-900">/ 50 points </span>
+      <div className=" w-full  h-fit absolute bottom-0">
+        <div className="bg-base-200 text-base-content  grid grid-cols-2 gap-4  rounded-lg  rounded-t-none px-4 py-2 shadow-lg ">
+          <div className="p-4">
+            <h4 className="text-gray-700 font-semibold text-lg mt-1 mb-2">
+              Coffee
+            </h4>
+            <p className="w-60  h-10 text-left break-words">
+              fdjkjkjdkjvkdjgkjdfkjgkdjkjgkdf kgkgkjkdjkgjdfjjjgdfjkdkjdfg
+            </p>
+          </div>
+          <div>
+            <div className="text-lg absolute right-2 top-8">2.5€</div>
+            <button className="btn btn-sm  text-xs absolute right-2 bottom-6 bg-slate-700 rounded-xl">
+              Buy
+            </button>
           </div>
         </div>
       </div>

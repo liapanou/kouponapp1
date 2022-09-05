@@ -30,7 +30,7 @@ export default function NewProduct() {
             <Input label="Product Name" className="mb-2" />
             <Input label="Product Name" className="mb-2" />
           </div>
-          <div className="border">
+          <div>
             <div className="mb-6 text-sm"> Product Images</div>
             <div className="flex space-x-6">
               <div className="flex justify-center mt-8 ">

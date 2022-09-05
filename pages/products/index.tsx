@@ -32,7 +32,7 @@ export default function Page() {
           <div className="grid overflow-auto pb-20 max-h-screen h-fit  md:grid-cols-2 lg:grid-cols-3 p-8 gap-4">
             <div className="relative w-full h-fit rounded-lg">
               <img
-                className="rounded-lg shadow-md  h-fit w-full "
+                className="rounded-lg shadow-md  h-80 w-full "
                 src="https://img.freepik.com/free-photo/mockup-disposable-coffee-cup_53876-63381.jpg?w=2000"
                 alt="product"
               />

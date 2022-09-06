@@ -3,11 +3,9 @@ import { Modal } from "../modal";
 export function CardMagazia(props) {
   return (
     <div className=" container mx-auto relative  ">
-      <div className="absolute  right-0  ">
-        <img className="w-24 h-24 z-10" src="/images/badge.png" />
-        <div className="z-20 top-9 absolute text-white font-bold left-3 text-sm">
-          100 points
-        </div>
+      <div className="absolute right-2 top-2">
+        <div className=" font-bold z-20">20</div>
+        <img className="w-20 h-20 z-10" src="/images/icons8-medal-100.png" />
       </div>
 
       <div>

@@ -6,10 +6,6 @@ export default function Orders() {
     <div>
       <Header />
       <div className="flex flex-col mt-8 container mx-auto">
-        <div className="flex justify-end w-full mb-4">
-          <Modal />
-        </div>
-
         <table className="table w-full ">
           <thead>
             <tr>

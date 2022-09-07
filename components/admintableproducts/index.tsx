@@ -1,3 +1,8 @@
+const products = [
+  { number: "1", name: "Coca Cola", type: "Beverage", price: "2" },
+  { number: "2", name: "Beer", type: "Drink", price: "4" },
+  { number: "3", name: "Tost", type: "Snack", price: "2" },
+];
 export function AdminTableProducts() {
   return (
     <div>
@@ -13,27 +18,14 @@ export function AdminTableProducts() {
             </tr>
           </thead>
           <tbody>
-            {/* row 1 */}
-            <tr>
-              <th>1</th>
-              <td>Coca Cola</td>
-              <td>Beverage</td>
-              <td>2</td>
-            </tr>
-            {/* row 2 */}
-            <tr>
-              <th>2</th>
-              <td>Beer</td>
-              <td>Drink</td>
-              <td>4</td>
-            </tr>
-            {/* row 3 */}
-            <tr>
-              <th>3</th>
-              <td>Tost</td>
-              <td>Snack</td>
-              <td>2</td>
-            </tr>
+            {products.map((o, idx) => (
+              <tr key={idx}>
+                <th>{o.number}</th>
+                <td>{o.name}</td>
+                <td>{o.type}</td>
+                <td>{o.price}</td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>

@@ -21,7 +21,7 @@ export function AdminTable() {
         }}
         className="btn w-60 flex ml-auto"
       >
-        Add Product
+        create dummy Order
       </button>
       <table className=" table  table-auto w-full">
         <thead>
@@ -60,38 +60,6 @@ export function AdminTable() {
           ))}
         </tbody>
       </table>
-      <h1>asdas</h1>
-      <h1>asdas</h1>
-      <h1>asdas</h1>
-      <h1>asdas</h1>
-      <h1>asdas</h1>
-      <h1>asdas</h1>
-      <h1>asdas</h1>
-      <h1>asdas</h1>
-      <h1>asdas</h1>
-      <h1>asdas</h1>
-      <h1>asdas</h1>
-      <h1>asdas</h1>
-      <h1>asdas</h1>
-      <h1>asdas</h1>
-      <h1>asdas</h1>
-      <h1>asdas</h1>
-      <h1>asdas</h1>
-      <h1>asdas</h1>
-      <h1>asdas</h1>
-      <h1>asdas</h1>
-      <h1>asdas</h1>
-      <h1>asdas</h1>
-      <h1>asdas</h1>
-      <h1>asdas</h1>
-      <h1>asdas</h1>
-      <h1>asdas</h1>
-      <h1>asdas</h1>
-      <h1>asdas</h1>
-      <h1>asdas</h1>
-      <h1>asdas</h1>
-      <h1>asdas</h1>
-      <h1>asdas</h1>
     </div>
   );
 }

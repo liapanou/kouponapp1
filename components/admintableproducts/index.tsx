@@ -1,3 +1,5 @@
+import { ModalPoints } from "../modalpoints";
+
 const products = [
   { number: "1", name: "Coca Cola", type: "Beverage", price: "2" },
   { number: "2", name: "Beer", type: "Drink", price: "4" },
@@ -15,6 +17,7 @@ export function AdminTableProducts() {
               <th>Name</th>
               <th>Type</th>
               <th>Price(€)</th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody>
@@ -24,6 +27,9 @@ export function AdminTableProducts() {
                 <td>{o.name}</td>
                 <td>{o.type}</td>
                 <td>{o.price}</td>
+                <td>
+                  <ModalPoints />
+                </td>
               </tr>
             ))}
           </tbody>

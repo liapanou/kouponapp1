@@ -1,4 +1,3 @@
-import { AdminHeader } from "../../components/adminheader";
 import { Layout } from "../../components/adminLayout";
 import { AdminSidebar } from "../../components/adminsidebar";
 import { AdminTable } from "../../components/admintable";

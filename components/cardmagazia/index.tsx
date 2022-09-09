@@ -6,10 +6,13 @@ export function CardMagazia(props) {
   const id = useId();
   return (
     <Link href={`/products?store=${id}`}>
-      <div className=" container mx-auto relative  ">
-        <div className="absolute right-2 top-2">
-          <div className=" font-bold z-20">20</div>
-          <img className="w-20 h-20 z-10" src="/images/icons8-medal-100.png" />
+      <div className=" container mx-auto   ">
+        <div className="relative">
+          <img
+            className="w-20 h-20 z-10 absolute right-2"
+            src="/images/icons8-medal-100.png"
+          />
+          <div className="font-extrabold absolute  top-6 right-10 z-20">20</div>
         </div>
 
         <div>
@@ -19,14 +22,13 @@ export function CardMagazia(props) {
           ></img>
         </div>
         <div className="relative px-4 -mt-20">
-          <div className="bg-white rounded-lg px-4 py-3 shadow-lg ">
-            <div className="flex items-start">
+          <div className="bg-white  rounded-lg px-4 py-3 shadow-lg ">
+            <div className="flex items-center">
               <h4 className="text-gray-900 font-semibold text-lg ">
-                Estrella{" "}
+                Estrella
                 <span className="text-xs text-gray-600 font-normal">($$)</span>
               </h4>
-              <span className="badge ml-auto">Coffee</span>
-              <span className="badge ml-1">Drinks</span>
+              <span className="badge badge-sm text-xs ml-auto">Coffee</span>
             </div>
 
             <div className="flex mt-2 items-end">

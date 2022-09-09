@@ -3,7 +3,7 @@ export function Modal() {
     <div className="ml-auto z-60">
       <>
         {/* The button to open modal */}
-        <label htmlFor="my-modal" className="btn modal-button btn-sm z-50">
+        <label htmlFor="my-modal" className="btn modal-button btn-xs z-50">
           Rate us
         </label>
         {/* Put this part before </body> tag */}

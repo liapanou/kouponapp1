@@ -1,6 +1,6 @@
 export function Modal() {
   return (
-    <div className="ml-auto z-60">
+    <div className="ml-auto z-50">
       <>
         {/* The button to open modal */}
         <label htmlFor="my-modal" className="btn modal-button btn-xs z-50">

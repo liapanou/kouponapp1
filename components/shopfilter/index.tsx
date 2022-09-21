@@ -127,7 +127,6 @@ export function ShopFilter() {
           </form>
         </div>
       </div>
-      );
     </div>
   );
 }

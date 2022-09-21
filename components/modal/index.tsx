@@ -4,10 +4,11 @@ export function Modal() {
       onClick={(evt) => {
         evt.stopPropagation();
       }}
-      className="ml-auto z-50">
+      className="ml-auto "
+    >
       <>
         {/* The button to open modal */}
-        <label htmlFor="my-modal" className="btn modal-button btn-xs z-50">
+        <label htmlFor="my-modal" className="btn modal-button btn-xs z-10">
           Rate us
         </label>
         {/* Put this part before </body> tag */}

@@ -12,9 +12,12 @@ export function CardProionda(props: Product) {
         src="https://img.freepik.com/free-photo/mockup-disposable-coffee-cup_53876-63381.jpg?w=2000"
         alt="product"
       />
-      <div className="absolute right-2 top-2">
-        <div className=" font-bold z-20">20</div>
-        <img className="w-20 h-20 z-10" src="/images/icons8-medal-100.png" />
+      <div className="relative">
+        <img
+          className="w-20 h-20 z-10 absolute right-2"
+          src="/images/icons8-medal-100.png"
+        />
+        <div className="font-extrabold absolute  top-6 right-10 z-20">20</div>
       </div>
       <div className=" w-full  h-fit absolute bottom-0">
         <div className="bg-base-200 text-base-content  grid grid-cols-2 gap-4  rounded-lg  rounded-t-none px-4 py-2 shadow-lg ">

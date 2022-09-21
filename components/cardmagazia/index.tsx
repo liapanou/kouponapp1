@@ -2,7 +2,9 @@ import Link from "next/link";
 import { useId } from "react";
 import { Modal } from "../modal";
 
-export function CardMagazia(props) {
+export type Shops = { img: string; name: string };
+
+export function CardMagazia(props: Shops) {
   const id = useId();
   return (
     <Link href={`/products?store=${id}`}>
@@ -18,14 +20,14 @@ export function CardMagazia(props) {
         <div>
           <img
             className="rounded-lg shadow-md h-fit w-full"
-            src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bW9kZXJuJTIwaG91c2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+            src={props.img}
           ></img>
         </div>
         <div className="relative px-4 -mt-20">
           <div className="bg-white  rounded-lg px-4 py-3 shadow-lg ">
             <div className="flex items-center">
               <h4 className="text-gray-900 font-semibold text-lg ">
-                Estrella
+                {props.name}
                 <span className="text-xs text-gray-600 font-normal">($$)</span>
               </h4>
               <span className="badge badge-sm text-xs ml-auto">Coffee</span>

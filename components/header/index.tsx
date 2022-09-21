@@ -33,7 +33,7 @@ export function Header() {
             </li>
             <li>
               <Link href="/admin/products">
-                <a className="justify-between">product</a>
+                <a className="justify-between">Product</a>
               </Link>
             </li>
             <form method="POST" action="/api/auth?type=logout">
